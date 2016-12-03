@@ -1,0 +1,259 @@
+\documentclass{book}
+\usepackage[english]{babel} 
+\usepackage[utf8x]{inputenc} 
+\usepackage[T1]{fontenc}  
+\usepackage{color} 
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{amsmath} 
+\usepackage{graphicx} 
+\usepackage[colorinlistoftodos]{todonotes} 
+\usepackage[colorlinks=true, allcolors=blue]{hyperref} 
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=0.5cm]{geometry}
+\setcounter{chapter}{5} 
+\setcounter{equation}{6}
+\definecolor{light-gray}{rgb}{0.8,0.8,0.8} 
+\begin{document}
+\pagestyle{fancy} 
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\textbf{5.2 Fractional changes and low-entropy expressions} \hfill{81}\\
+\\
+\\
+\large{of the plausible alternatives measures the gap between our intuition and
+reality; the larger the gap, the harder the correct result must work to fill
+it, and the harder we must work to remember the correct result.
+\\
+
+Such gaps are the subject of statistical mechanics and information theory
+[20, 21], which define the gap as the logarithm of the number of plausible
+alternatives and call the logarithmic quantity the entropy. The logarithm
+does not alter the essential point that expressions differ in the number of
+plausible alternatives and that high-entropy expressions [28]—ones with
+many plausible alternatives—are hard to remember and understand.
+\\
+
+In contrast, a low-entropy expression allows few plausible alternatives,
+and elicits, “Yes! How could it be otherwise?!” Much mathematical and
+scientific progress consists of finding ways of thinking that turn highentropy
+expressions into easy-to-understand, low-entropy expressions.}
+\\
+
+\textit{What is a low-entropy expression for the correction to the product xy?}
+\\
+
+\large{A multiplicative correction, being dimensionless, automatically has lower
+entropy than the additive correction: The set of plausible dimensionless
+expressions is much smaller than the full set of plausible expressions.
+\\
+
+The multiplicative correction is $(x + \triangle x )(y + \triangle y)/xy$. As written, this
+ratio contains gratuitous entropy. It constructs two dimensioned sums $x + \triangle x$ and $y + \triangle y$, multiplies them, and finally divides the product by $xy$. Although the result is dimensionless, it becomes so only in the last step.
+A cleaner method is to group related factors by making dimensionless
+quantities right away:}
+\begin{equation}
+\frac{(x+\Delta x)(y+\Delta y)}{xy}=\frac{x+\Delta x}{x}\frac{y+\Delta y}{y}=(1+\frac{\Delta x}{x})(1+\frac{\Delta y}{y}).
+\end{equation}
+\large{The right side is built only from the fundamental dimensionless quantity 1
+and from meaningful dimensionless ratios: $(\triangle x) / x$ is the fractional change
+in $x$, and $\triangle y / y$ is the fractional change in $y$.}
+\\
+
+\large{The gratuitous entropy came from mixing $x+\triangle x$, $y+\triangle y,$ $x$ and $y$ willy
+nilly, and it was removed by regrouping or unmixing. Unmixing is dif-
+ficult with physical systems. Try, for example, to remove a drop of food
+coloring mixed into a glass of water. The problem is that a glass of
+water contains roughly $10^{25}$ molecules. Fortunately, most mathematical
+expressions have fewer constituents. We can often regroup and unmix
+the mingled pieces and thereby reduce the entropy of the expression.}
+
+\newpage
+ \large\textbf{82} \hfill \textit{5 Taking out the big part} \\ 
+\vspace{0pt} 
+\\
+\\
+\colorbox{lightgray}{
+\begin{minipage}{\textwidth}
+ {\large\textbf{Problem 5.9 Rectangle for the correction factor}
+ 
+Draw a rectangle representing the low-entropy correction factor}
+ \begin{equation}
+ (1+\frac{\Delta x}{x})(1+\frac{\Delta y}{y}).
+ \end{equation}
+\end{minipage}}
+\\
+\\
+\large{A low-entropy correction factor produces a low-entropy fractional change:
+\begin{equation}
+\frac{\Delta (xy)}{xy}=(1+\frac{\Delta x}{x})(1+\frac{\Delta y}{y})-1=\frac{\Delta x}{x}+\frac{\Delta y}{y}+\frac{\Delta x}{x}\frac{\Delta y}{y},
+\end{equation}
+\\
+\\
+where $\Delta (xy)/xy$ is the fractional change from $xy$ to $(x+\Delta x)(y+\Delta y)$.
+The rightmost term is the product of two small fractions, so it is small
+compared to the preceding two terms. Without this small, quadratic term,}
+\begin{equation}
+\frac{\Delta (xy)}{xy}\approx\frac{\Delta x}{x}+\frac{\Delta y}{y}
+\end{equation}
+\large{Small fractional changes simply add!
+\\
+
+This fractional-change rule is far simpler than the corresponding approximate
+rule that the absolute change is $x\Delta y+y\Delta x$. Simplicity indicates
+low entropy; indeed, the only plausible alternative to the proposed rule
+is the possibility that fractional changes multiply. And this conjecture is
+not likely: When $\Delta y=0$, it predicts that $\Delta xy=0$ no matter the value
+of $\Delta x$ (this prediction is explored also in Problem 5.12).}
+\\
+
+\colorbox{lightgray}{
+\begin{minipage}{\textwidth}
+ {\textbf{Problem 5.10 Thermal expansion}
+ 
+If, due to thermal expansion, a metal sheet expands in each dimension by 4\%,
+what happens to its area?}
+\\
+
+\textbf{Problem 5.11 Price rise with a discount}
+\\
+
+Imagine that inflation, or copyright law, increases the price of a book by 10\%
+compared to last year. Fortunately, as a frequent book buyer, you start getting a
+store discount of 15\%. What is the net price change that you see?
+\end{minipage}
+}
+\\
+\\
+{\textbf{5.2.3 Squaring}
+\\
+
+\large{In analyzing the engineered and natural worlds, a common operation is
+squaring—a special case of multiplication. Squared lengths are areas, and
+squared speeds are proportional to the drag on most objects (Section 2.4):}
+\begin{equation}
+F_{d}\sim \rho \nu^{2}A
+ \end{equation}
+
+\newpage
+\textbf{5.2 Fractional changes and low-entropy expressions} \hfill{83}\\
+\\
+\\
+\large{where v is the speed of the object, $A$ is its cross-sectional area, and $\rho$ is
+the density of the fluid. As a consequence, driving at highway speeds for
+a distance d consumes an energy $E=F_{d} d \sim \rho A \nu^{2}d$. Energy consumption
+can therefore be reduced by driving more slowly. This possibility became
+important to Western countries in the 1970s when oil prices rose rapidly
+(see [7] for an analysis). As a result, the United States instituted a highway
+speed limit of 55 mph (90 kph).}
+\\
+\\
+\textit{By what fraction does gasoline consumption fall due to driving 55 mph instead
+of 65 mph?}
+\\
+\\
+\large{A lower speed limit reduces gasoline consumption by reducing the drag
+force $\rho A \nu^{2}$ and by reducing the driving distance $d$: : People measure and
+regulate their commuting more by time than by distance. But finding a
+new home or job is a slow process. Therefore, analyze first things first—
+assume for this initial analysis that the driving distance $d$ stays fixed (then
+try Problem 5.14).}
+\\
+\\
+\large{With that assumption, $E$ is proportional to $\nu^{2}$, and}
+\begin{equation}
+\frac{\Delta E}{E}=2 \times \frac{\Delta \nu}{\nu}
+\end{equation}
+\\
+\\
+\large{Going from 65 mph to 55 mph is roughly a 15\% drop in $\nu$ so the energy
+consumption drops by roughly 30\%. Highway driving uses a significant
+fraction of the oil consumed by motor vehicles, which in the United States
+consume a significant fraction of all oil consumed. Thus the 30\% drop
+substantially reduced total US oil consumption.}
+\\
+\\
+\colorbox{lightgray}{
+\begin{minipage}{\textwidth}
+ {\textbf{Problem 5.12 A tempting error}
+ 
+If $A$ and $x$ are related by $A=x^{2}$ , a tempting conjecture is that}
+\begin{equation}
+\frac{\Delta A}{A} \approx (\frac{\Delta x}{x})^{2}.
+\end{equation}
+Disprove this conjecture using easy cases (Chapter 2).
+\\
+\\
+\textbf{Problem 5.13 Numerical estimates }
+
+Use fractional changes to estimate $6.3^{3}$. How accurate is the estimate?
+\\
+\\
+\textbf{Problem 5.14 Time limit on commuting }
+
+Assume that driving time, rather than distance, stays fixed as highway driving
+speeds fall by 15\%. What is the resulting fractional change in the gasoline consumed
+by highway driving?
+\end{minipage}
+}
+\newpage
+ \large\textbf{84} \hfill \textit{5 Taking out the big part} \\ 
+\vspace{0pt} 
+\\
+\\
+\colorbox{lightgray}{
+\begin{minipage}{\textwidth}
+ {\textbf{Problem 5.15 Wind power}
+ 
+The power generated by an ideal wind turbine is proportional to $\nu^{3}$ (why?). If
+wind speeds increase by a mere 10\%, what is the effect on the generated power?
+The quest for fast winds is one reason that wind turbines are placed on cliffs or
+hilltops or at sea.}
+\end {minipage}
+}
+\\
+\\
+
+\textbf{5.3 Fractional changes with general exponents}
+\\
+
+The fractional-change approximations for changes in $x^{2}$ (Section 5.2.3) and
+in $x^{3}$ (Problem 5.13) are special cases of the approximation for $x^{n}$
+\begin{equation}
+\frac{\Delta (x^{n})}{x^{n}} \approx n \times \frac{\Delta x}{x}
+\end{equation}
+\\
+\\
+This rule offers a method for mental division (Section 5.3.1), for estimating
+square roots (Section 5.3.2), and for judging a common explanation for the
+seasons (Section 5.3.3). The rule requires only that the fractional change
+be small and that the exponent $n$ not be too large (Section 5.3.4).
+\\
+\\
+\textbf{5.3.1 Rapid mental division}
+\\
+\\
+\large{The special case $n=-1$ provides the method for rapid mental division.
+As an example, let’s estimate $1/13$. Rewrite it as $(x+\Delta x)^{-1}$ with $x=10$ and $\Delta x = 3$. The big part is $x^{-1}= 0.1$. Because $\Delta x / x = 30\%$,  the
+fractional correction to $x^{-1}$ is roughly −30\%. The result is 0.07.}
+\begin{equation}
+\frac{1}{13} \approx \frac{1}{10} - 30\%=0.07,
+\end{equation}
+\\
+\\
+\large{where the “−30\%” notation, meaning “decrease the previous object by
+30\%,” is a useful shorthand for a factor of 1 − 0.3.}
+\\
+\\
+\textit{How accurate is the estimate, and what is the source of the error?}
+\\
+\\
+\large{The estimate is in error by only 9\%. The error arises because the linear
+approximation}
+\begin{equation}
+\frac{(\Delta x^{-1})}{x^{-1}} \approx -1 \times \frac{\Delta x}{x}
+\end{equation}
+\\
+\\
+\large{does not include the square (or higher powers) of the fractional change $\Delta x / x$ (Problem 5.17 asks you to find the squared term).}
+
+\end{document}
