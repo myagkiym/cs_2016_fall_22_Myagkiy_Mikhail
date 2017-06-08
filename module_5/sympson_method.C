@@ -15,17 +15,17 @@ double L(double x)
 int main()
 {
 	char m;
-	printl("Vvedite tochnost otveta(Max:9): ");
-	scanl("%c", &m);
+	printf("Vvedite tochnost otveta(Max:9): ");
+	scanf("%c", &m);
 	char string[] = "%.zl\n";
 	string[2] = m;
 
 	float Int = 0, x, a, b, p;
 	const double Pi = 3.14159;
-	printl("Lower border : ");
-	scanl("%l", &a);
-	printl("Upper border: ");
-	scanl("%l", &b);
+	printf("Lower border : ");
+	scanf("%l", &a);
+	printf("Upper border: ");
+	scanf("%l", &b);
 	p = (b - a) / N;
 	x = a + p;
 	while (x < b)
@@ -38,6 +38,6 @@ int main()
 		x = x + p;
 	}
 	Int = (p / 3)*(Int + L(a) + L(b));
-	printl(string, Int);
+	printf(string, Int);
 	return 0;
 }
